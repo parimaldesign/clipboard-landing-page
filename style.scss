@@ -1,0 +1,430 @@
+//  Reset CSS
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+//  Common CSS
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap');
+
+:root {
+	--cyan : hsl(171, 66%, 44%);
+	--light-blue : hsl(233, 100%, 69%);
+	--dark-grey : hsl(210, 10%, 33%);
+	--light-grey : hsl(201, 11%, 66%);
+}
+
+.m-0-auto{
+	margin: 0px auto;
+}
+
+.mt-30{
+	margin-top: 30px;
+}
+
+.mb-30{
+	margin-bottom: 30px;
+}
+
+.pb-0{
+    padding-bottom: 0px !important;
+}
+
+.pb-60{
+    padding-bottom: 60px !important;
+}
+
+body{
+	font-family: "Bai Jamjuree", sans-serif;
+    line-height: 1.7;
+    font-size: 18px;
+	color: var(--light-grey);
+}
+
+// common Headings
+.heading{
+	color: var(--dark-grey);
+}
+
+.heading-sm{	
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.content-sm{
+    font-size: 16px;
+}
+
+ul{
+	padding-left: 0px;
+	list-style: none;
+	margin: 0px;
+}
+
+h1{
+    font-size: 2.8rem;
+	line-height: 1.2;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.content{
+	color: var(--light-grey);
+	letter-spacing: .3px;
+}
+
+.margin-40{
+	margin: 40px 0px;
+}
+
+.flex-center{
+	display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn{
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 35px 8px;
+    border-radius: 100px;
+	transition: all ease-in-out .3s;
+
+	&:hover{
+		transform: translateY(-3px) scale(1.01);
+		opacity: .8;
+	}
+}
+
+.btn-green{
+	background-color: var(--cyan);
+    border-bottom: 3px solid #1e9d84;
+    box-shadow: 0px 5px 20px rgb(39 201 177 / 50%);
+}
+
+.btn-blue{
+	background-color: var(--light-blue);
+    border-bottom: 3px solid #5161da;
+    box-shadow: 0px 5px 20px rgb(97 115 255 / 50%);
+}
+
+.section{
+	padding: 70px 0px;
+
+	.section-header{
+		width: 60vw;
+		margin: 0px auto;
+		max-width: 630px;
+		text-align: center;
+		padding-bottom: 70px;
+	}
+}
+
+//  Header
+
+.hero{
+	background-image: url(images/bg-header-desktop.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	.hero-content{
+		text-align: center;
+		max-width: 780px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 150px 30px 50px;
+	}
+
+		.logo-wrap{
+			margin-bottom: 50px;
+		}
+
+		.heading{
+			margin-bottom: 20px;
+		}
+		.content{
+			font-size: 1.2rem;
+		}
+}
+
+// Features Section
+
+.feature-section{	
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.features-section-inner{
+	display: flex;
+    gap: 100px;
+
+	.img-wrap{
+		width: 50%;
+		img{
+			width: 105%;
+			max-width: unset;
+			transform: translateX(-5%);
+		}
+	}
+
+	.features{
+		max-width: 400px;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: center;
+	}
+}
+
+.icon-features{
+    display: grid;
+    max-width: 1240px;
+    margin: 0px auto;
+    gap: 40px;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 50px;
+
+	img{
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+}
+
+.logo-grid{
+	max-width: 1300px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer{
+	background-color: #f5f6f8;
+
+	a{
+		color: var(--dark-grey);
+		text-decoration: none;
+	}
+
+	.footer-inner{
+		margin: 0px auto;
+		max-width: 1200px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 50px 30px;
+
+		.logo{
+			max-width: 60px;
+		}
+
+		.links{
+			flex: 1;
+			display: grid;
+			padding-left: 120px;
+			grid-template-columns: repeat(3,200px);
+
+			a{
+				display: inline-block;
+				padding: 5px 0px;
+				font-weight: 500;
+				letter-spacing: .4px;
+				opacity: .9;
+			}
+		}
+
+		.social-media{
+			display: flex;
+			gap: 20px;
+			align-items: center;
+
+			a{
+				font-size: 30px;
+			}
+		}
+
+	}
+
+	.footer-bottom{
+		text-align: center;
+		padding: 10px 0;
+		color: #fff;
+		background-color: var(--dark-grey);
+
+		.attribution a{
+			color: #33f5d8;
+		}
+	}
+}
+
+// Responsive
+
+@media screen and (max-width: 1250px) {
+	.features-section-inner{
+		gap: 50px;
+
+		.features{
+			gap: 30px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 992px) {
+	.features-section-inner{
+		flex-direction: column;
+		align-items: center;
+
+		.img-wrap{
+			width: 70%;
+
+			img{
+				max-width: 100%;
+				transform: unset;
+			}
+		}
+		.features{
+			text-align: center;
+			padding: 0px 20px;
+		}
+	}
+
+	.icon-features{
+		max-width: 500px;
+		padding: 0px 30px;
+		gap: 70px;
+		grid-template-columns: 1fr;
+	}
+
+	.logo-grid{
+		flex-direction: column;
+		gap: 60px;
+	}
+
+	footer .footer-inner{
+		flex-direction: column;
+		gap: 30px;
+
+		.links{
+			padding-left: 0;
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.flex-center{
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+
+		.btn{
+			max-width: 220px;
+		}
+	}
+
+	.hero .hero-content{
+		.heading{
+			font-size: 2.2rem;
+		}
+		.content{
+			font-size: 1.1rem;
+		}
+	}
+	h2{
+		line-height: 1.1;
+	}
+
+	.section .section-header{
+		width: unset;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.features-section-inner .img-wrap{
+		width: 100%;
+		padding: 0px 30px;
+	}
+}
