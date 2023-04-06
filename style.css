@@ -360,9 +360,14 @@ footer .footer-bottom .attribution a {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 30px;
   }
   .flex-center .btn {
-    max-width: 220px;
+    max-width: 340px;
+    width: 80vw;
+  }
+  .hero {
+    background-image: url(images/bg-header-mobile.png);
   }
   .hero .hero-content .heading {
     font-size: 2.2rem;

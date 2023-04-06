@@ -399,18 +399,24 @@ footer{
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
+		gap: 30px;
 
 		.btn{
-			max-width: 220px;
+			max-width: 340px;
+			width: 80vw;
 		}
 	}
 
-	.hero .hero-content{
-		.heading{
-			font-size: 2.2rem;
-		}
-		.content{
-			font-size: 1.1rem;
+	.hero{
+		background-image: url(images/bg-header-mobile.png);
+
+		.hero-content{
+			.heading{
+				font-size: 2.2rem;
+			}
+			.content{
+				font-size: 1.1rem;
+			}
 		}
 	}
 	h2{
