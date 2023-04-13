@@ -100,6 +100,10 @@ select {
   padding-bottom: 60px !important;
 }
 
+.none {
+  display: none;
+}
+
 body {
   font-family: "Bai Jamjuree", sans-serif;
   line-height: 1.7;
